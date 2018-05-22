@@ -1,0 +1,295 @@
+.body{
+	background-color: #fff;
+}
+.header-top{
+	background-image: url(../images/bg_head_top.jpg);
+	height: 145px;
+	transition: all 0.25s ease 0s;
+}
+.flag{
+	list-style: none;
+	display: flex;
+}
+.flag li{
+	margin: 5px;
+}
+.search-form{
+	padding-right: 5px;
+}
+.search-form input{
+	border: none;
+	box-shadow: 1px 1px 8px 1px rgba(1,1,1,.3);
+	padding-left: 30px;
+/* 	padding-top: 5px; */
+	font-size: 14px;
+	background: transparent;
+}
+.search-form input:focus{
+	background: transparent;
+	border: none;
+	box-shadow: 1px 1px 8px 1px rgba(1,1,1,.3);
+}
+.search-form button{
+	border: none;
+	box-shadow: 1px 1px 8px 1px rgba(1,1,1,.3);
+}
+
+/* ================ MENU =====================*/
+
+.menu{
+/*   display: flex; */
+  list-style:none;
+  background-color: #fff46e;
+}
+.menu>li:first-child{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.menu>li:first-child i{
+	font-size: 22px;
+	color: #fff;
+}
+.menu .active{
+	background: #f7c938;
+}
+.menu>li{
+	float: left;
+	position: relative;
+	padding: 10px;
+}
+.menu>li:hover{
+	 background: #f7c938;
+}
+.menu>li:hover > .sub-menu{
+	top: 100%;
+	opacity: 1;
+	visibility: visible;
+}
+.sub-menu>li:hover> a{
+	color: #f7c938;
+}
+.menu>li a{
+  text-transform: uppercase;
+	color: rgba(1,1,1,.6);
+	text-decoration: none;
+  font-weight: 500;
+	font-size: 20px;
+}
+.menu .sub-menu{
+	position: absolute;
+/* 	display: none; */
+	top: 200%;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	list-style: none;
+	background-color: #fff;
+	box-shadow: 1px 1px 6px 1px rgba(1,1,1,.4);
+	padding: 10px;
+	transition: top .25s ease 0s,opacity .25s ease 0s,visibility .25s ease 0s;
+	z-index: 99;
+}
+.sub-menu>li{
+	width: 220px;
+	border-bottom: 1px solid gray;
+	padding: 5px;
+
+}
+.sub-menu>li a{
+	font-size: 14px;
+	font-weight:600;
+}
+.sub-menu li:last-child{
+  border: none;
+}
+
+/*===================Slider=================*/
+.site-content{
+	position: relative;
+	top: -15px;
+}
+.marquee{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	background: rgba(1,1,1,.4);
+	padding: 10px;
+
+}
+.marquee a{
+		color: #fff;
+}
+.marquee span{
+	margin-right: 400px;
+}
+/* ========================================Main============================== */
+
+.site-main{
+	display: flex;
+}
+.site-main .news-top{
+	display: flex;
+}
+.news{
+	color: #686969;
+	font-size: 18px;
+	font-weight: 400;
+}
+.news .top-right a{
+	font-weight: 600;
+	font-size: 22px;
+	color: #fff46e;
+}
+.news .btn{
+	background: #fff46e;
+}
+.news-top .top-left{
+	border: 5px solid yellow;
+	margin:5px;
+}
+.news-top .top-right{
+	padding: 5px;
+	margin: 5px;
+}
+.news-bottom li{
+	margin: 10px;
+	list-style-color:#fff46e;
+}
+.thongbao{
+	box-shadow: 1px 1px 10px 1px rgba(1,1,1,.4);
+	margin: 10px;
+	
+}
+.thongbao .title{
+	text-align: center;
+	padding: 5px;
+	color: rgba(1,1,1,.8);
+	background: #fff46e;
+	font-size: 22px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.thongbao ul{
+	overflow-y: scroll;
+	max-height: 340px;
+}
+.thongbao li{
+	margin: 10px;
+}
+.tuyen-sinh{
+	background-color: #f1f1f1;
+}
+.ts-container .title,.hn-container{
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 32px;
+	font-weight: 600;
+}
+.ts-container .item img{
+	width: 100%;
+	margin: 5px;
+}
+.tu-van{
+	margin: 10px;
+}
+
+.moi-truong{
+	background-image: url(http://demos.k2themes.com/dhhl/wp-content/uploads/2018/03/bg_home_2.jpg?id=39);
+}
+.moi-truong .title{
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 32px;
+	font-weight: 600;
+}
+.moi-truong .title h4{
+	background-color: #111;
+	padding: 10px;
+	color: yellow;
+}
+.moi-truong .item img{
+	width: 100%;
+	margin: 5px;
+}
+#lienketSlider{
+	margin: 20px 0px;
+}
+.hn-container .info{
+	font-size: 20px;
+	font-weight: 600;
+	padding: 10px;
+}
+
+/*======================================FOOTER====================================*/
+.footer{
+	background: #333;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+}
+.footer h3{
+  font-size: 18px;
+	font-weight: 600;
+}
+.footer .title{
+	text-align: center;
+	font-size: 22px;
+	background-color: #ddd112;
+	padding: 10px;
+}
+.footer .content{
+	/*padding: 20px;*/
+}
+.footer .lienket ul{
+	display: flex;
+	align-items: right;
+}
+.footer .lienket li{
+	list-style: none;
+	margin: 10px;
+	
+}
+
+.footer .lienhe{
+	margin-left: 10px;
+}
+.footer .lienket{
+
+}
+.footer .contact{
+	margin-top: -15px;
+}
+.footer .gioithieu{
+	/*padding: 10px;*/
+	margin: 20px;
+  
+}
+.footer p{
+	margin: -5px;
+}
+@media screen and (max-width: 991px ) {
+   .sub-menu{
+	    display: none;
+  	}
+  	.menu>li{
+  		/*display: none;*/
+		width: 100%
+  	}
+  	.menu>li:hover .sub-menu{
+  		display: block;
+  		left: 200px;
+  	}
+  	.menu>li:first-child{
+  		display: block;
+  	}
+  	.menu-respon {
+  		display: block;
+  	}
+  	.wrap-header-top{
+  		display: none;
+  	}
+
+}
