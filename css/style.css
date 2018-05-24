@@ -1,17 +1,20 @@
-.body{
+body{
 	background-color: #fff;
+	font-family: arial;
 }
 .header-top{
 	background-image: url(../images/bg_head_top.jpg);
 	height: 145px;
 	transition: all 0.25s ease 0s;
+	padding-right: 30px;
 }
 .flag{
 	list-style: none;
-	display: flex;
+	margin: 20px;
 }
 .flag li{
 	margin: 5px;
+	float: right;
 }
 .search-form{
 	padding-right: 5px;
@@ -142,11 +145,16 @@
 	color: #fff46e;
 }
 .news .btn{
+	border-radius: 0px;
 	background: #fff46e;
+	font-size: 26px;
+	padding: 0 20px;
 }
 .news-top .top-left{
 	border: 5px solid yellow;
-	margin:5px;
+	margin:20px;
+	min-height: 215px;
+	/*! width: 363px; */
 }
 .news-top .top-right{
 	padding: 5px;
@@ -157,7 +165,7 @@
 	list-style-color:#fff46e;
 }
 .thongbao{
-	box-shadow: 1px 1px 10px 1px rgba(1,1,1,.4);
+	box-shadow: 1px 1px 2px 1px rgba(1,1,1,.4);
 	margin: 10px;
 	
 }
@@ -179,6 +187,7 @@
 }
 .tuyen-sinh{
 	background-color: #f1f1f1;
+	padding: 30px;
 }
 .ts-container .title,.hn-container{
 	width: 100%;
@@ -192,12 +201,14 @@
 	margin: 5px;
 }
 .tu-van{
-	margin: 10px;
+	margin: 40px 0;
+
 }
 
 .moi-truong{
 	background-image: url(http://demos.k2themes.com/dhhl/wp-content/uploads/2018/03/bg_home_2.jpg?id=39);
 }
+
 .moi-truong .title{
 	width: 100%;
 	text-align: center;
@@ -206,9 +217,10 @@
 	font-weight: 600;
 }
 .moi-truong .title h4{
-	background-color: #111;
+	background-color: #35322b;
 	padding: 10px;
-	color: yellow;
+	color: #eac71c;
+	font-size: 36px;
 }
 .moi-truong .item img{
 	width: 100%;
@@ -217,12 +229,17 @@
 #lienketSlider{
 	margin: 20px 0px;
 }
+.hn-container{
+	padding: 30px 0;
+}
 .hn-container .info{
 	font-size: 20px;
 	font-weight: 600;
-	padding: 10px;
+	/*padding: 10px 0;*/
 }
-
+.container .content{
+	padding: 15px 0;
+}
 /*======================================FOOTER====================================*/
 .footer{
 	background: #333;
@@ -232,27 +249,32 @@
 }
 .footer h3{
   font-size: 18px;
-	font-weight: 600;
+	font-weight: 400;
 }
 .footer .title{
 	text-align: center;
-	font-size: 22px;
-	background-color: #ddd112;
-	padding: 10px;
+	font-size: 20px;
+	background-color: #fff46e;
+	padding: 8px;
+	color: #2c2930;
 }
 .footer .content{
 	/*padding: 20px;*/
 }
 .footer .lienket ul{
-	display: flex;
-	align-items: right;
+	
 }
 .footer .lienket li{
 	list-style: none;
 	margin: 10px;
-	
+	float: right;
 }
-
+.lienhe p{
+	margin: -5px;
+}
+.gioithieu p{
+	margin: -2px;
+}
 .footer .lienhe{
 	margin-left: 10px;
 }
@@ -268,7 +290,12 @@
   
 }
 .footer p{
-	margin: -5px;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 0;
+	font-family: "myria-re", serif;
+	font-weight: 400;
+	line-height: 1.4;
 }
 @media screen and (max-width: 991px ) {
    .sub-menu{
