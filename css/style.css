@@ -50,8 +50,8 @@ body{
   margin-left: -20px;
 }
 .menu>li:first-child{
-	padding-left: 25px;
-	padding-right: 25px;
+	padding: 12px 18px;
+	float: left;
 }
 .menu>li:first-child i{
 	font-size: 22px;
@@ -60,22 +60,11 @@ body{
 .menu .active{
 	background: #f7c938;
 }
-.menu>li{
-	float: left;
-	position: relative;
-	padding: 12px 18px;
-}
+
 .menu>li:hover{
 	 background: #f7c938;
 }
-.menu>li:hover > .sub-menu{
-	top: 100%;
-	opacity: 1;
-	visibility: visible;
-}
-.sub-menu>li:hover> a{
-	color: #f7c938;
-}
+
 .menu>li a{
   	text-transform: uppercase;
 	color: #58595b;
@@ -86,34 +75,9 @@ body{
 	font-size: 17px;
 	letter-spacing: 0.05em;
 }
-.menu .sub-menu{
-	position: absolute;
-/* 	display: none; */
-	top: 200%;
-	left: 0;
-	visibility: hidden;
-	opacity: 0;
-	list-style: none;
-	background-color: #fff;
-	box-shadow: 1px 1px 6px 1px rgba(1,1,1,.4);
-	padding: 10px;
-	transition: top .25s ease 0s,opacity .25s ease 0s,visibility .25s ease 0s;
-	z-index: 99;
+.menu>li span{
+	display: none;
 }
-.sub-menu>li{
-	width: 220px;
-	border-bottom: 1px solid gray;
-	padding: 5px 15px;
-
-}
-.sub-menu>li a{
-	font-size: 14px;
-	font-weight:400;
-}
-.sub-menu li:last-child{
-  border: none;
-}
-
 /*===================Slider=================*/
 .site-content{
 	position: relative;
@@ -152,6 +116,7 @@ body{
 .site-main .news-top{
 	display: flex;
 }
+
 .news{
 	color: #686969;
 	font-size: 18px;
@@ -173,6 +138,9 @@ body{
 	background: #fff46e;
 	font-size: 26px;
 	padding: 0 20px;
+}
+.news-top,.news-bottom{
+	padding: 10px;
 }
 .news-top .top-left{
 	border: 5px solid yellow;
@@ -289,6 +257,7 @@ body{
 
 .moi-truong{
 	background-image: url(http://demos.k2themes.com/dhhl/wp-content/uploads/2018/03/bg_home_2.jpg?id=39);
+
 }
 
 .moi-truong .title{
@@ -297,6 +266,9 @@ body{
 	text-transform: uppercase;
 	font-size: 32px;
 	font-weight: 600;
+	/*padding: 0 20%;	*/
+	
+	/*background-color: #35322b;*/
 }
 .moi-truong .content {
   padding-bottom: 34px;
@@ -304,11 +276,13 @@ body{
 }
 .moi-truong .title h4{
 	background-color: #35322b;
-  font-family: Roboto, sans-serif;
+  	font-family: Roboto, sans-serif;
 	padding: 10px;
+	width: 100%;
 	color: #eac71c;
-  font-size: 42px;
-  font-weight: 200;
+  	font-size: 42px;
+  	font-weight: 200;
+  	margin: 0 auto;	
 }
 .moi-truong .title h4 .to{
   font-weight: 500;
@@ -335,6 +309,10 @@ body{
 }
 .hn-container .img{
   margin: 22px 0;
+}
+.container .content{
+	/*padding-left: -20px;m*/
+	margin-left: -25px;
 }
 /*======================================FOOTER====================================*/
 .footer{
@@ -419,21 +397,107 @@ body{
   top: 0px;
   transform: rotate(-45deg);
 }
+.disable{
+	display: none;
+}
+.menu-toggler{
+	position: absolute;
+	left: 84px;
+	line-height: 45px;
+	font-size: 20px;
+	font-weight: 400;
+	cursor: pointer;
+}
+.menu-item span{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
 
+@media screen and (min-width: 992px ) {
+	.menu>li:hover > .sub-menu{
+		top: 100%;
+		opacity: 1;
+		visibility: visible;
+	}
+	.sub-menu>li:hover> a{
+		color: #f7c938;
+	}
+	.menu>li{
+		float: left;
+		position: relative;
+		padding: 12px 18px;
+		
+	}
+	.menu .sub-menu{
+		position: absolute;
+		top: 200%;
+		left: 0;
+		visibility: hidden;
+		opacity: 0;
+		list-style: none;
+		background-color: #fff;
+		box-shadow: 1px 1px 6px 1px rgba(1,1,1,.4);
+		padding: 10px;
+		transition: top .25s ease 0s,opacity .25s ease 0s,visibility .25s ease 0s;
+		z-index: 99;
+	}
+	.sub-menu>li{
+		width: 220px;
+		border-bottom: 1px solid gray;
+		padding: 5px 15px;
+
+	}
+	.sub-menu>li a{
+		font-size: 14px;
+		font-weight:400;
+	}
+	.sub-menu li:last-child{
+	  border: none;
+	}
+	
+}
 @media screen and (max-width: 991px ) {
+	.menu{
+		position: relative;
+		left: 0px;
+		width: 100%;
+	}
+	
+	.menu>li{
+		width: 100%;
+		list-style: none;
+		padding: 5px;
+	}
+	.menu>li span{
+		display: block;
+	}
    .sub-menu{
 	    display: none;
   	}
+	.sub-menu li{
+		margin: 5px;
+		list-style: none;
+	 }
+	.sub-menu li:hover a{
+		color: #fff;
+	}
+  	.menu-toggler{
+  		display: block;
+		color: #99f;
+		margin-left: 10px;
+	}
+  .menu>.menu-item
   	.menu>li{
-  		/*display: none;*/
+  		display: none;
 		width: 100%
   	}
-  	.menu>li:hover .sub-menu{
-  		display: block;
-  		left: 200px;
+  	.sub-menu{
+  		width: 100%;
   	}
   	.menu>li:first-child{
   		display: block;
+  		border-bottom: 2px solid #f99;
   	}
   	.menu-respon {
   		display: block;

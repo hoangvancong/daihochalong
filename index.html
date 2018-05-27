@@ -48,10 +48,11 @@
 				</div>
 			</div>
 			<!-- Menu -->
-			<div class="container-new">
+			<div class="container-new" style="background-color: #fff46e">
 					
 					<ul class="menu clearfix">
 						<li class="menu-item active"><a href=""><i class="fa fa-home"></i></a></li>
+						<span><i href="#" class="menu-toggler disable">Menu</i></span>
 						<li class="menu-item">
 							<a href="#">Giới thiệu</a>
 							<ul class="sub-menu">
@@ -68,8 +69,9 @@
 									<a href="">Ba công khai</a>
 								</li>
 							</ul>
+							
 						</li>
-						<li>
+						<li class="menu-item">
 							<a href="#">Tuyển Sinh</a>
 							<ul class="sub-menu">
 								<li class="menu-item">
@@ -82,32 +84,36 @@
 									<a href="">Hồ sơ xét tuyển</a>
 								</li>
 							</ul>
+							
 						</li>
-						<li>
+						<li class="menu-item">
 							<a href="#">Đào tạo</a>
 							<ul class="sub-menu">
 								<li class="menu-item"><a href="">Đại học chính quy</a></li>
 								<li class="menu-item"><a href="">Cao đẳng</a></li>
 								<li class="menu-item"><a href="">Trung cấp</a></li>
 							</ul>
+							
 						</li>
-						<li>
+						<li class="menu-item">
 							<a href="#">Nghiên cứu</a>
 							<ul class="sub-menu">
 								<li class="menu-item"><a href="">Thông tin khoa học</a></li>
 								<li class="menu-item"><a href="">Kết quả NCKH</a></li>
 					
 							</ul>
+							
 						</li>
-						<li>
+						<li class="menu-item">
 							<a href="#">Hợp tác</a>
 							<ul class="sub-menu">
 								<li class="menu-item"><a href="">Quốc tế</a></li>
 								<li class="menu-item"><a href="">trong nước</a></li>
-					
+								
 							</ul>
+							
 						</li>
-						<li><a href="#">Sinh viên</a>
+						<li class="menu-item"><a href="#">Sinh viên</a>
 							<ul class="sub-menu">
 								<li class="menu-item"><a href="">Hỏi đáp</a></li>
 								<li class="menu-item"><a href="">Học phí</a></li>
@@ -116,12 +122,14 @@
 								<li class="menu-item"><a href="">Thời khóa biểu</a></li>
 								<li class="menu-item"><a href="">Văn bản, biểu mẫu</a></li>
 							</ul>
+							
 						</li>
-						<li><a href="#">Liên hệ</a>
+						<li class="menu-item"><a href="#">Liên hệ</a>
 							<ul class="sub-menu">
 								<li class="menu-item"><a href="">Lịch công tác</a></li>
 								<li class="menu-item"><a href="">Tuyển dụng</a></li>
 							</ul>
+							
 						</li>
 					</ul>
 				</nav>
@@ -250,7 +258,7 @@
 				</div>
 			</div>
 			<div class="moi-truong">
-				<div class="title row"><div class="col-md-2 col-lg-3"></div><h4 class="col-md-8 col-lg-6"> Môi trường <span class="to">học tập</span></h4><div class="col-md-2 col-lg-3"></div></div>
+				<div class="title"><h4 class="col-md-8 col-lg-6"> Môi trường <span class="to">học tập</span></h4></div>
 				<div class="container">
 					<div class="content row">
 						<div class="item col-xs-12 col-md-4 col-lg-4"><img src="http://demos.k2themes.com/dhhl/wp-content/uploads/2018/03/home_image_13.png" alt=""></div>
@@ -389,7 +397,19 @@
 				$(".menu>li").removeClass('active');
 				$(this).addClass('active');
 			});
+			$(".menu-toggler").click(function(){
+				$(".menu>li").toggle();
+				$(".menu>li:first-child").show();
+			});
 			
+			$(".menu-item").click(function() {
+				$(".sub-menu").hide();
+				$(this).children(".sub-menu").show();
+				// $(this).prev(".sub-menu").toggle();
+				// $(".menu>li").removeClass('active');
+				
+				// $(this).parrent("li").addClass('active');
+			});
 		});
 	</script>
 </body>
