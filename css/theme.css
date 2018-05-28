@@ -224,11 +224,7 @@ li.current-menu-ancestor > a {
   .sub-menu.submenu-open {
     max-height: 1000px;
   }
-  .sub-menu.submenu-open + .cs-menu-toggle > i:before {
-    color: #fff;
-    content: "\f2fc";
-    font-family: "mater";
-  }
+ 
 
 
   .cms-carousel-partner .item img {
@@ -287,9 +283,9 @@ li.current-menu-ancestor > a {
   .header-top .wrap-head-top {
     display: none;
   }
-  .main-navigation .sub-menu{
+ /* .main-navigation .sub-menu{
     display: none;
-  }
+  }*/
   .header-top {
     background-size: cover;
   }

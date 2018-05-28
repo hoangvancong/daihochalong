@@ -1,22 +1,18 @@
 $(document).ready(function(){
         
     /* Menu drop down*/
+    $(".primary-menu>.menu-item").append('<span class="cs-menu-toggle"><i class="fas fa-sort-up"></i></span>');
     $('.cs-menu-toggle').on('click', function(){
         
         if(!$(this).prev().hasClass('submenu-open')){
             $(this).prev().addClass('submenu-open');
-            
+             $(this).children('.fas').removeClass('fa-sort-up');
+            $(this).children('.fas').addClass('fa-sort-down');
+        
         } else {
             $(this).prev().removeClass('submenu-open');
-           
-        }
-
-        if (!$(this).children('fa-sort-up')) {
-            $('.fas').removeClass('fa-sort-down');
-            $('.fas').addClass('fa-sort-up');
-        }else{
-            $('.fas').removeClass('fa-sort-up');
-            $('.fas').addClass('fa-sort-down');
+           $(this).children('.fas').removeClass('fa-sort-down');
+            $(this).children('.fas').addClass('fa-sort-up');
         }
     });
 
